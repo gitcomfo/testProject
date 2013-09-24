@@ -26,7 +26,7 @@ if(strlen($nameValue) > 0){
 //set output to "No Suggestion in no hint were found"
 // or to the correct Values
 if($hint == ""){
-    $responseSuggestion = "No Suggestion";
+    $responseSuggestion = "No Suggestion, Please try with another way";
     }  else {
 $responseSuggestion = $hint;    
 }
