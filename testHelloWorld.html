@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Ajax and HTML And PHP</title>
+<script>
+    function showHint(str){
+        if(str.length==0){
+            document.getElementById("txtHint").innerHTML="";
+            return;
+        }
+        if(window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest();
+        }
+    xmlhttp.onreadystatechange=function(){
+        if(xmlhttp.readyState==4 && xmlhttp.status==200){
+            document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET","gethint.php?hintValue="+str,true);
+    xmlhttp.send();
+    }
+</script>
+</head>
+<body>
+<div id='container'>
+  <form name="contactForm" id='contact_form' method="post" action=''>
+      Fisrt Name: <input type="text" onkeyup="showHint(this.value)">
+      <p>Suggestions:</p><br />
+      <div id="txtHint"></div>
+  </form>
+  <footer>This demo form is the reference to the article</footer>
+</div>
+</body>
+</html>
