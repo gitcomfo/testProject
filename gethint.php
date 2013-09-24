@@ -1,9 +1,11 @@
 <?php
 
 //File up Array with names
-$nameArray[]="ibrahim rahman";
-$nameArray[]="ibu sikder";
-$nameArray[]="ibra Patowary";
+$nameArray[]="Bushra rahman";
+$nameArray[]="Bush dot CSS";
+$nameArray[]="Zeshi Sultana";
+$nameArray[]="Iftekharul Alam Efat";
+$nameArray[]="Mohammad Ibrahim";
  
 //Get the nameValue parameter from url
 $nameValue = $_GET["hintValue"];
